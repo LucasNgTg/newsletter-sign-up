@@ -1,0 +1,206 @@
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Roboto"), url("../../assets/fonts/Roboto-Regular.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    src: local("Roboto-Bold"), url("../../assets/fonts/Roboto-Bold.ttf");
+}
+
+:root {
+    --tomato: hsl(4, 100%, 67%);
+    --orange: hsl(14, 99%, 62%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+/* sign up start */
+
+body {
+    background-color: var(--charcoal-grey);
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up {
+    background-color: var(--white);
+    color: var(--dark-slate-grey);
+    display: grid;
+    grid-template-columns:
+        [full-width-start] 1.5rem [content-start] 1fr [content-end] 1.5rem [full-width-end];
+    row-gap: 1rem;
+    padding-bottom: 3rem;
+}
+
+.img-container {
+    grid-column: full-width;
+    display: flex;
+    justify-content: center;
+}
+
+.illustration {
+    width: 100%;
+}
+
+.sign-up .content {
+    grid-column: content;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.sign-up .content .text {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.sign-up .content .text h1 {
+    font-size: clamp(2.5rem, 2.5rem + 100vw - 375px, 3.5rem);
+}
+
+.sign-up .content .text p {
+    line-height: 150%;
+}
+
+.sign-up .content .text ul {
+    display: grid;
+    gap: .5rem;
+    list-style-type: none;
+}
+
+.sign-up .content .text ul li {
+    line-height: 150%;
+    background: url("../../assets/images/icon-list.svg") no-repeat left top;
+    padding-left: 2.25rem;
+}
+
+.sign-up .content form {
+    display: grid;
+}
+
+.sign-up .content form .feedback {
+    color: var(--charcoal-grey);
+    display: grid;
+    grid-auto-flow: column;
+    font-size: .75rem;
+    font-weight: 700;
+    padding: .5rem 0;
+}
+
+.sign-up .content form .feedback .error-message {
+    justify-self: end;
+    color: var(--tomato);
+}
+
+.sign-up .content form .email {
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+}
+
+.sign-up .content form .email-error {
+    background-color: hsla(4, 100%, 67%, 25%);
+    border-color: var(--tomato);
+    color: var(--tomato);
+}
+
+#submit {
+    border: none;
+    border-radius: 8px;
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    padding: 1.125rem;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: .2s ease-out;
+}
+
+#submit:hover {
+    background-image: linear-gradient(90deg, var(--tomato), 60%, var(--orange));
+    box-shadow: 0 10px 20px 5px hsla(4, 100%, 67%, 50%);
+    cursor: pointer;
+}
+
+/* sign up end */
+
+/* success start */
+
+.success {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20vh 1.5rem 2rem;
+    color: var(--dark-slate-grey);
+    min-height: 100vh;
+}
+
+.message {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.success .message img {
+    max-width: 4rem;
+    margin: .5rem 0;
+}
+
+.success .message h2 {
+    font-size: clamp(2rem, 2rem + 100vw - 375px, 3.5rem);
+}
+
+#dismiss {
+    border: none;
+    border-radius: 8px;
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    padding: 1.125rem;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: .2s ease-out;
+}
+
+#dismiss:hover {
+    background-image: linear-gradient(90deg, var(--tomato), 60%, var(--orange));
+    box-shadow: 0 10px 20px 5px hsla(4, 100%, 67%, 50%);
+    cursor: pointer;
+}
+
+/* success end */
+
+.hidden {
+    display: none;
+}
+
+.attribution {
+    background-color: var(--dark-slate-grey);
+    font-size: .6rem;
+    padding: 10px;
+    text-align: center;
+}
+
+.attribution span {
+    color: var(--grey);
+}
+
+.attribution a {
+    color: #6abecd;
+}

@@ -1,0 +1,76 @@
+@media(min-width: 490px) {
+    .sign-up {
+        border-radius: 30px;
+        overflow: hidden;
+    }
+}
+
+@media(min-width: 800px) {
+
+    /* success start */
+
+    .success {
+        border-radius: 30px;
+        max-width: 31rem;
+        min-height: unset;
+        max-height: 32rem;
+        padding: 2rem 4rem 4rem 4rem;
+        gap: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .success .message {
+        gap: 1rem;
+    }
+
+    .success .message h2 {
+        font-size: clamp(2.5rem, 3.5rem + 100vw - 1440px, 3.5rem);
+        line-height: 110%;
+    }
+
+    /* success end */
+}
+
+@media(orientation: landscape) {
+
+    /* sign up start */
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sign-up {
+        border-radius: 30px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 1.5rem;
+        gap: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .sign-up .content {
+        padding: clamp(1rem, 2.5rem + 100vw - 1440px, 2.5rem);
+        max-width: 28rem;
+    }
+
+    .sign-up .content .text {
+        padding: 0;
+    }
+
+    .sign-up .content .text h1 {
+        font-size: clamp(2.5rem, 3.5rem + 100vw - 1440px, 3.5rem);
+    }
+
+    .illustration {
+        max-height: 80vh;
+    }
+
+    /* sign up end */
+
+    .hidden {
+        display: none;
+    }
+}
